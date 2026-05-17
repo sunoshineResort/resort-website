@@ -28,10 +28,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Horizontal scroll arrows
-function scrollStrip(btn, dir) {
-  const strip = btn.parentElement.querySelector('.hscroll');
-  strip.scrollBy({ left: dir * 320, behavior: 'smooth' });
-}
+document.querySelectorAll('.hscroll-arrow').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const strip = btn.closest('.hscroll-wrapper').querySelector('.hscroll');
+    const dir = btn.classList.contains('right') ? 1 : -1;
+    strip.scrollBy({ left: dir * 320, behavior: 'smooth' });
+  });
+});
 
 // Lightbox
 const lightbox  = document.getElementById('lightbox');
