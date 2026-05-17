@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sunoshinereport.github.io/resort-website/sitemap.xml
