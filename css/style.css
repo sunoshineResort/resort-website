@@ -668,8 +668,19 @@ img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 768px) {
 
   /* NAVBAR */
-  .navbar { padding: 14px 20px; }
-  .nav-links { display: none; }
+  .navbar {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 16px;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
 
   /* HERO */
   .hero-title { font-size: 3rem; }
