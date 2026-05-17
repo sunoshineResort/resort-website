@@ -27,6 +27,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Horizontal scroll arrows
+function scrollStrip(btn, dir) {
+  const strip = btn.parentElement.querySelector('.hscroll');
+  strip.scrollBy({ left: dir * 320, behavior: 'smooth' });
+}
+
 // Lightbox
 const lightbox  = document.getElementById('lightbox');
 const lbImg     = document.getElementById('lbImg');
